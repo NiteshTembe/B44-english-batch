@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let oddInArray = function(arr){
+        //     let result = []
+        //     for(let element of arr){
+	    //         if(element%2!==0){
+        //             result.push(element)
+        //         }
+        //     }
+        //     return result;
+        // }
+        // console.log(oddInArray([1,2,3,4,5,6,7,8]))
+
+        // (function(arr){
+        //     let result = []
+        //     for(let element of arr){
+	    //         if(element%2!==0){
+        //             result.push(element)
+        //         }
+        //     }
+        //     console.log(result)
+        // })([1,2,3,4,5,6,7,8])    
+        
+//         let arr2 = [1,2,3,4,5,6,-7,8,9,10,11]
+//         let primeNumbers = function(arr){   // using anonymoue function
+//             let res = []
+//             for(val of arr){
+//                 let isPrime = true
+//                 if(val<2) continue
+//                 for(let i=2; i<val; i++){
+//                     if(val%i===0){
+//                         isPrime =false
+//                         break
+//                     }
+//                 }
+//                 if(isPrime) res.push(val)
+//             }
+//             return res
+//         }
+//         console.log(primeNumbers(arr2));
+// // using IIFE
+//         (function(arr){
+//             let res = []
+//             for(val of arr){
+//                 let isPrime = true
+//                 if(val<2) continue
+//                 for(let i=2; i<val; i++){
+//                     if(val%i===0){
+//                         isPrime =false
+//                         break
+//                     }
+//                 }
+//                 if(isPrime) res.push(val)
+//             }
+//             console.log(res)
+//         })(arr2)
+
+// let arr1 = ["pop", 1005001, 12976, "frog", 101, "non"]
+// let reverseString = function(str){
+//     if(Number.isInteger(str)) str= str.toString()
+//     if (str === "")
+//     return ""
+//     else
+//     return reverseString(str.substr(1)) + str.charAt(0);
+// }
+// let sortPalindrome = function(arr){ // using anonymous function
+//     let output = []
+//     for(let element of arr){
+//         if(element == reverseString(element)) output.push(element)
+//     }
+//     return output
+// }
+// console.log(sortPalindrome(arr1));
+// // using IIFE
+// (function(arr){
+//     let output = []
+//     for(let element of arr){
+//         if(element == reverseString(element)) output.push(element)
+//     }
+//     console.log( output)
+// })(arr1)
+
+
+// let arr1 = [10,20,25,50]
+// let arr2 = [50,60,79,97]
+// let findMedianOf2Array = function(ar1,ar2){
+//     let arr = ar1.concat(ar2)
+//     console.log(arr)
+//     arr.sort(function(a,b){
+//         return a-b
+//     })
+//     return (arr[arr.length/2]+arr[arr.length/2-1])
+// }
+// console.log(findMedianOf2Array(arr1,arr2));
+// // Using IIFE
+// (function(ar1,ar2){
+//     let arr = ar1.concat(ar2)
+//     console.log(arr)
+//     arr.sort(function(a,b){
+//         return a-b
+//     })
+//     console.log (arr[arr.length/2]+arr[arr.length/2-1])
+// })(arr1,arr2)
+
+// let arr1 = [1,4,6,7,8,4,1,'hi', 'a', 'hi']
+// let removeDuplicate = function(arr){ // using anonymous function
+//     let unique = []
+//     for(val of arr){
+//         if(!unique.includes(val)) unique.push(val)
+//     }
+//     return unique
+// }
+// console.log(removeDuplicate(arr1));
+// // using IIFE
+// (function(arr){
+//     let unique = []
+//     for(val of arr){
+//         if(!unique.includes(val)) unique.push(val)
+//     }
+//     console.log(unique)
+// let rotateArray = function(arr, k){
+//     k = k % arr.length
+//     for(let i=0; i<k; i++){
+//         arr = [arr.pop(),...arr]
+//     }
+//     return arr
+// }
+// console.log(rotateArray([1,2,3,4,5,6],9));
+
+// (function(arr, k){
+//     k = k % arr.length
+//     for(let i=0; i<k; i++){
+//         arr = [arr.pop(),...arr]
+//     }
+//     console.log(arr)
+// })([10,23,45,67,87],2)
+// })(arr1)
+
+// let arr1 = [1,2,4,5,6,-7,-10]
+// let sortingOdd = (arr)=>{  //anonymous function
+//             let result = []
+//             for(let element of arr){
+//                 if(element%2!==0 && element>0){
+//                     result.push(element)
+//                 }
+//             }
+//             return result;
+//         }
+// console.log(sortingOdd(arr1))
+
+// let toTitleCase = (str)=>{
+//     str = str.toLowerCase().split(' ');
+//     for (var i = 0; i < str.length; i++) {
+//         str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+//     }
+//     return str.join(' ');
+// }
+// let strArrayToTitleCase = (arr) => {
+//     for(let key in arr){  arr[key]=toTitleCase(arr[key])   }
+//     return arr
+// }
+// console.log(strArrayToTitleCase(["abc","def ghi"]))
+
+// let arr2 = [1,2,3,4,5,6,-7,8,9,10,11]
+// let primeNumbers = (arr)=>{   // using anonymoue function
+//     let res = []
+//     for(val of arr){
+//         let isPrime = true
+//         if(val<2) continue
+//         for(let i=2; i<val; i++){
+//             if(val%i===0){
+//                 isPrime =false
+//                 break
+//             }
+//         }
+//         if(isPrime) res.push(val)
+//     }
+//     return res
+// }
+// console.log(primeNumbers(arr2))
+
+let arr1 = ["pop", 1005001, 12976, "frog", 101, "non"]
+let reverseString = (str)=>{
+    if(Number.isInteger(str)) str= str.toString()
+    if (str === "")
+    return ""
+    else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+let sortPalindrome = (arr)=>{
+    let output = []
+    for(let element of arr){
+        if(element == reverseString(element)) output.push(element)
+    }
+    return output
+}
+console.log(sortPalindrome(arr1))
+
+
+
+
+
+    </script>
+</body>
+</html>
