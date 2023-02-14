@@ -1,0 +1,93 @@
+body{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 1.5vw;
+}
+.container{
+    padding: 0 10px;
+}
+.c1 > span{
+    float: left;
+    padding-left: 5px;
+}
+label{
+    display: block;
+}
+.c1 , .c2 {
+    display: block;
+    clear:both;
+    padding-top: 5px;
+}
+.c2, label,td,th, #submit {
+    color: grey;
+}
+#email{
+    width:200%
+}
+.req_star{
+    color: red;
+}
+h4{
+    margin-bottom: 5px;
+}
+textarea { 
+    width: 100%; 
+    margin: 0; 
+    padding: 0 ; 
+}
+.textareaContainer {
+	display: block;
+	border: 3px solid #38c;
+	padding: 10px;
+}
+table{
+    width:100%;
+}
+td {
+    text-align: center;
+    padding: 5px;
+}
+th {
+    text-align: left;
+    width:15%;
+    font-weight: lighter;
+}
+
+.rating {
+    float: left;
+  }
+  
+  .rating > label {
+    color: #90A0A3;
+    float: right;
+  }
+  
+  .rating > label:before {
+    margin: 0 5px;
+    font-size: 2em;
+    font-family: FontAwesome;
+    content: "\f005";
+    display: inline-block;
+  }
+  
+  .rating > input {
+    display: none;
+  }
+  
+  .rating > input:checked ~ label,
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: orange;
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label,
+  .rating > input:checked ~ label:hover ~ label {
+    color: orange;
+  }
+  #submit{
+      border: none;
+      padding: 10px;
+  }
+
+
