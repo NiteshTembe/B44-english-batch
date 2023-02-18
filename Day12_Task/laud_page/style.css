@@ -1,0 +1,16 @@
+.main-title{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.vr{
+    min-width: 1px;
+}
+.btn-color-red{
+    background-color: darkred;
+}
+.btn-color-orange{
+    background-color: darkorange;
+}
+.btn-color-grey{
+    background-color: lightgray;
+}
