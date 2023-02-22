@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+.container {
+    max-width: 300px;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:gray;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    max-width: 280px !important;
+    width: 280px !important;
+}
+
+.row{
+    max-width: 80%;
+    flex-wrap: nowrap;
+    align-self: center;
+}
