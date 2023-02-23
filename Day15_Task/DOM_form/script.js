@@ -108,7 +108,7 @@ function validateForm() {
     attr3.value=30
     field.setAttributeNode(attr3)
     const attr4 = document.createAttribute("rows")
-    attr4.value=10
+    attr4.value=5
     field.setAttributeNode(attr4)
     field.classList.add("form-control")
     formgroupdiv.appendChild(field)
@@ -118,7 +118,7 @@ function validateForm() {
   function createCheckBox(name,id,str){
     const label = document.createElement("label")
     const labelTextNode = document.createTextNode(str)
-    label.classList.add("chechbox-inline")
+    label.classList.add("checkbox-inline")
     const field = document.createElement("input")
     field.id=id
     field.type="checkbox"
@@ -175,7 +175,7 @@ function validateForm() {
     radattr2.value="gender"
     r1.setAttributeNode(radattr2)
     const radlab = document.createElement("label")
-    radlab.classList.add("radion-inline")
+    radlab.classList.add("radio-inline")
     const radlabtext = document.createTextNode("Male")
     const forlabel1 = document.createAttribute("for")
     forlabel1.value="Male"
@@ -193,7 +193,7 @@ function validateForm() {
     radattr4.value="gender"
     r2.setAttributeNode(radattr4)
     const radlab1 = document.createElement("label")
-    radlab1.classList.add("radion-inline")
+    radlab1.classList.add("radio-inline")
     const radlabtext1 = document.createTextNode("Female")
     const forlabel2 = document.createAttribute("for")
     forlabel2.value="Female"
@@ -235,8 +235,7 @@ function validateForm() {
   form.appendChild(btngr)
 
   container.appendChild(form)
-  document.body.appendChild(container)
-document.getElementById("pincode").setAttribute("pattern","^[0-9]{6}$")
+
 
   // div with class=table-responsive
 const tdiv = document.createElement("div")
@@ -246,7 +245,10 @@ tableElement.id = "table"
 tableElement.classList.add("table")
 tableElement.classList.add("table-bordered")
 tdiv.appendChild(tableElement)
-document.body.appendChild(tdiv)
+container.appendChild(tdiv)
+
+document.body.appendChild(container)  
+document.getElementById("pincode").setAttribute("pattern","^[0-9]{6}$")
 // Insert table element with innerHtml
 document.getElementById("table").innerHTML = `<thead>
                     <tr>
