@@ -25,7 +25,7 @@ async function getCountryData(){
 } 
 getCountryData()
 function displayCountryData(data){
-    console.log(data)
+  //  console.log(data)
     data.map((element)=>{
         if(element.latlng == "undefined"){
             console.log(element)
@@ -45,7 +45,7 @@ function displayCountryData(data){
                         <h3 class="fs-5">Region : ${element.region}</h3>
                         <h3 class="fs-5">Country Code : ${element.alpha3Code}</h3>
                         <h3 class="fs-5">LatLng : ${element.latlng}</h3>
-                        <div class="btn btn-primary mb-4 grad p-1" onclick="getCityWeatherLatLon(${element.latlng})">Click For Weather</div>
+                        <div class="btn btn-primary mb-4 grad p-1" onclick="getCityWeatherLatLon(${element.latlng})" data-bs-toggle="modal" data-bs-target="#displayWeatherModal">Click For Weather</div>
                     </div>
                 </div>
             </div>
@@ -53,13 +53,31 @@ function displayCountryData(data){
     })
 }
 
-async function getCityWeatherLatLon(latlng){
+async function getCityWeatherLatLon(lat,lon){
+    console.log(lat,lon)
     try{
-        let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latlng[0]}&lon=${latlng[1]}&appid=0e3471fe288a457b9f253be31b12caee`)
+        let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0e3471fe288a457b9f253be31b12caee`)
         let weatherData = await res.json()
         console.log(weatherData)
+        displayWeatherData(weatherData)
     }
     catch(err){
         console.log(err)
     }
 } 
+
+function displayWeatherData(data){
+
+    const myModal = document.getElementById('displayWeatherModal')
+    const displayWeatherModalLabel = document.getElementById('displayWeatherModalLabel')
+    displayWeatherModalLabel.innerText=data.name
+    const modalBody = document.getElementById("modalBody")
+    let displayData = `
+        <p class="text-center fs-6">Temp : ${data.main.temp}</p>
+        <p class="text-center fs-6">Feels Like :${data.main.feels_like}</p>
+        <p class="text-center fs-6">Weather : ${data.weather[0].main}</p>
+        <p class="text-center fs-6">Weather : ${data.weather[0].description}</p>
+    `
+    modalBody.innerHTML=displayData
+
+}
