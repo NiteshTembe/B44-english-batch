@@ -26,7 +26,6 @@ let count = 11;
                                                 setTimeout(()=>{
                                                     counter.innerText="Happy Birthday !"
                                                     counter.style.color="blue"
-                                                    clearTimeout()
                                                 },1000)
                                             },1000)
                                         },1000)
