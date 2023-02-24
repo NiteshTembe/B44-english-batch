@@ -48,7 +48,7 @@ let count = 11;
                                                     counter.style.transform="scale(1)"
                                                     document.body.style.backgroundImage="linear-gradient(orange, white, green)"
                                                 },1000)
-                                                counter.style.opacity=1
+                                                counter.style.opacity=0
                                             },1000)
                                         },1000)
                                     },1000)
