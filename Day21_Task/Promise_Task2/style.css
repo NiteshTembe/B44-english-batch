@@ -1,0 +1,16 @@
+#table, th , td {
+    border: 1px solid black;
+    padding: 0;
+}
+
+thead, th {
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+}
+
+#tableDiv {
+    overflow: auto; 
+    height: 500px;
+}
+

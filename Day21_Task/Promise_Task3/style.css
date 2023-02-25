@@ -1,0 +1,22 @@
+.navbarColor{
+    background-color: #22254b !important;
+}
+body{
+    background-color: #373b69;
+}
+.synopsis{
+    position: absolute;
+    left:0;
+    bottom: 0px;
+    opacity: 0;
+    height: 410px;
+    overflow-y: scroll;
+}
+.anime:hover .synopsis{
+    opacity: 1;
+    background-color: #fff;
+    transition: opacity 0.9s ease-in-out;
+}
+img{
+    height:410px;
+}
