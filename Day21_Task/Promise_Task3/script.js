@@ -1,20 +1,18 @@
 document.title="Promise Task 3"
 
-let url="https://api.jikan.moe/v4/anime"
-async function getAnimeData(){
-    let data=await fetch(url)
-    let res=await data.json()
-    console.log(res.data)
-    showAnime(res.data)//args
-}
-getAnimeData()
+// below function is used to fetch data using api given in url
 
-let mainAnimeDiv=document.getElementById('mainAnimeDiv')
-//console.log(mainAnimeDiv)
+const fetchPromise = fetch("https://api.jikan.moe/v4/anime")
+fetchPromise.then(response=>{
+   return response.json()
+}).then(res=>{
+    reponsedata = res.data
 
-function showAnime(animes){
-  //  console.log(animes)
-    animes.map((element,index)=>{
+const mainAnimeDiv = document.createElement("div")
+mainAnimeDiv.classList.add("row","row-cols-1","row-cols-sm-2","row-cols-md-3","row-cols-xl-4","g-4","m-1")
+
+// this function is used to show all data using bootstrap card in to mainAnimeDiv
+reponsedata.map((element,index)=>{
         let animeDiv=document.createElement('div')
         animeDiv.classList.add("col","anime")
         animeDiv.innerHTML=`
@@ -34,10 +32,12 @@ function showAnime(animes){
               </div>
             </div>        
           </div>
-
         `
         mainAnimeDiv.append(animeDiv)
     })
-}
 
+    document.body.appendChild(mainAnimeDiv)
+
+})
+.catch(err=>console.log(err))
 
