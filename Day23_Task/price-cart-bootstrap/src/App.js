@@ -1,5 +1,6 @@
+//import logo from './logo.svg';
 import './App.css';
-import {ProductCart} from './ProductCart.js';
+import { ProductCart } from './ProductCart';
 function App() {
 
   const productDetails = [
@@ -9,14 +10,14 @@ function App() {
       currency : "$",
       duration : "month",
       features : [
-        { name : "Single User", checked : true },
-        { name : "5GB Storage", checked : true },
-        { name : "Unlimited Public Projects", checked : true },
-        { name : "Community Access", checked : true },
-        { name : "Unlimited Private Projects", checked : false },
-        { name : "Dedicated Phone Support", checked : false },
-        { name : "Free Subdomain", checked : false },
-        { name : "Monthly Status Report", checked : false }
+        { id:1 , name : "Single User", checked : true },
+        { id:2 , name : "5GB Storage", checked : true },
+        { id:3 , name : "Unlimited Public Projects", checked : true },
+        { id:4 , name : "Community Access", checked : true },
+        { id:5 , name : "Unlimited Private Projects", checked : false },
+        { id:6 , name : "Dedicated Phone Support", checked : false },
+        { id:7 , name : "Free Subdomain", checked : false },
+        { id:8 , name : "Monthly Status Report", checked : false }
       ]
   },
     {
@@ -25,14 +26,14 @@ function App() {
       currency : "$",
       duration : "month",
       features : [
-        { name : "5 User", checked : true },
-        { name : "50GB Storage", checked : true },
-        { name : "Unlimited Public Projects", checked : true },
-        { name : "Community Access", checked : true },
-        { name : "Unlimited Private Projects", checked : true },
-        { name : "Dedicated Phone Support", checked : true },
-        { name : "Free Subdomain", checked : true },
-        { name : "Monthly Status Report", checked : false }
+        { id:1 , name : "5 User", checked : true },
+        { id:2 , name : "50GB Storage", checked : true },
+        { id:3, name : "Unlimited Public Projects", checked : true },
+        { id:4, name : "Community Access", checked : true },
+        { id:5 , name : "Unlimited Private Projects", checked : true },
+        { id:6 , name : "Dedicated Phone Support", checked : true },
+        { id:7 , name : "Free Subdomain", checked : true },
+        { id:8 , name : "Monthly Status Report", checked : false }
       ]
   },
     {
@@ -41,14 +42,14 @@ function App() {
       currency : "$",
       duration : "month",
       features : [
-        { name : "Unlimited Users", checked : true },
-        { name : "150GB Storage", checked : true },
-        { name : "Unlimited Public Projects", checked : true },
-        { name : "Community Access", checked : true },
-        { name : "Unlimited Private Projects", checked : true },
-        { name : "Dedicated Phone Support", checked : true },
-        { name : "Free Subdomain", checked : true },
-        { name : "Monthly Status Report", checked : true }
+        { id:1 , name : "Unlimited Users", checked : true },
+        { id:2 , name : "150GB Storage", checked : true },
+        { id:3 , name : "Unlimited Public Projects", checked : true },
+        { id:4 , name : "Community Access", checked : true },
+        { id:5 , name : "Unlimited Private Projects", checked : true },
+        { id:6 , name : "Dedicated Phone Support", checked : true },
+        { id:7 , name : "Free Subdomain", checked : true },
+        { id:8 , name : "Monthly Status Report", checked : true }
       ]
   }
   ]
@@ -60,8 +61,8 @@ function App() {
   <div className="container">
     <div className="row">
       { productDetails.map(
-        (product) => (
-          <ProductCart name={product.name} price={product.price} currency={product.currency} duration={product.duration} features={product.features}/>
+        (product,k) => (
+          <ProductCart key={k} name={product.name} price={product.price} currency={product.currency} duration={product.duration} features={product.features}/>
         )
       )}
      

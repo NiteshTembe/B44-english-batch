@@ -1,3 +1,4 @@
+
 function ProductCart({name,price,currency,duration,features}){
     return (
      <div className="col-lg-4">
@@ -22,11 +23,11 @@ function ProductCart({name,price,currency,duration,features}){
    return (
      <>
      {features.map(
-       (data,index) => {
+       (data) => {
          if(data.checked)
-         return  <li key={index}><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
+         return  <li key={data.id}><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
          else 
-         return <li key={index} className="text-muted"><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
+         return <li key={data.id} className="text-muted"><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
        }
      )}
      </>
