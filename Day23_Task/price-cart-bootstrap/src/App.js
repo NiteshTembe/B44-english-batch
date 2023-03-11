@@ -1,9 +1,8 @@
-//import logo from './logo.svg';
 import './App.css';
-
+import {ProductCart} from './ProductCart.js';
 function App() {
 
-  const product_details = [
+  const productDetails = [
     {
       name : "FREE",
       price : 0,
@@ -60,7 +59,7 @@ function App() {
 <section className="pricing py-5">
   <div className="container">
     <div className="row">
-      { product_details.map(
+      { productDetails.map(
         (product) => (
           <ProductCart name={product.name} price={product.price} currency={product.currency} duration={product.duration} features={product.features}/>
         )
@@ -70,41 +69,6 @@ function App() {
   </div>
 </section>
 
-  );
-}
-
-function ProductCart({name,price,currency,duration,features}){
-   return (
-    <div className="col-lg-4">
-        <div className="card">
-          <div className="card-body">
-            <h5 className="card-title text-muted text-uppercase text-center">{name}</h5>
-            <h6 className="card-price text-center">{currency}{price}<span className="period">/{duration}</span></h6>
-            <hr/>
-            <ul className="fa-ul">
-              <ProductFeature features = {features}/>              
-            </ul>
-            <div className="d-grid">
-              <a href="/" className="btn btn-primary text-uppercase">Button</a>
-            </div>
-          </div>
-        </div>
-      </div>
-   );
-}
-
-function ProductFeature({features}){
-  return (
-    <>
-    {features.map(
-      (data) => {
-        if(data.checked)
-        return  <li><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
-        else 
-        return <li className="text-muted"><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
-      }
-    )}
-    </>
   );
 }
 
