@@ -3,17 +3,21 @@
 }
 
 .banner {
-  height : 350px;
-  width: 90%;
+  height : 24vw;
+  width: 100%;
   object-fit: cover;
 }
 
 #shopppingCarousel {
-  height: 350px;
+  height: 24vw;
+}
+
+.product-card {
+  width : 250px;
 }
 
 .product-thumbnail {
   height: 270px;
-  width : 270px;
+  width : 250px;
   object-fit: cover;
 }

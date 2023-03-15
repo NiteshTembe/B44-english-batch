@@ -23,7 +23,7 @@ export function Product({ id, name, thumbnail, price, discountPercentage, rating
     });
     return (
         <div className="col mb-4">
-            <div className="card h-100">
+            <div className="product-card card h-100">
                 {/* <!-- Sale badge-->
             {sale ? <div className="badge bg-dark text-white position-absolute">Sale</div> : ""} */}
 
