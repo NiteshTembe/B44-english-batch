@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.banner {
+  height : 350px;
+  width: 90%;
+  object-fit: cover;
+}
+
+#shopppingCarousel {
+  height: 350px;
+}
+
+.product-thumbnail {
+  height: 270px;
+  width : 270px;
+  object-fit: cover;
+}

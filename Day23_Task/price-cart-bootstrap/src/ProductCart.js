@@ -23,12 +23,9 @@ function ProductCart({name,price,currency,duration,features}){
    return (
      <>
      {features.map(
-       (data) => {
-         if(data.checked)
-         return  <li key={data.id}><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
-         else 
-         return <li key={data.id} className="text-muted"><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
-       }
+       (data) => ( 
+         <li key={data.id} className={data.checked ? "" : "text-muted"}><span className="fa-li"><i className="fas fa-check"></i></span>{data.name}</li>
+        )
      )}
      </>
    );
