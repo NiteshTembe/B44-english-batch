@@ -1,19 +1,16 @@
 import './App.css';
-import UserDetails from './context/UserDetails';
+import AlertContext from './context/AlertContext';
 import Dashboard from './components/Dashboard';
+import ShowAlert from './components/ShowAlert';
 
 function App() {
   return (
-    <UserDetails>
+    <AlertContext>
       <div className="App">
         <Dashboard/>
-        {/* <Sidebar/>
-        <Routes>
-          <Route path="/users" element={<Users />} />
-          <Route path="/create-user" element={<AddUser />} />
-        </Routes> */}
+        <ShowAlert/>
       </div>
-    </UserDetails>
+    </AlertContext>
     
   );
 }

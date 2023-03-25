@@ -2,11 +2,6 @@ import React, { useContext, useState } from "react";
 import {
   Button,
   CssBaseline,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -17,51 +12,46 @@ import {
 } from "@mui/material";
 import { Box, Container, createTheme } from "@mui/system";
 import { ThemeProvider } from "styled-components";
-import { UsersDetailsContext } from "../context/UserDetails";
+import { ShowAlertContext } from "../context/AlertContext";
+import { usersAPI } from "../global/global";
 import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 export function AddUser() {
-  const [userData, setUserData] = useContext(UsersDetailsContext);
-  const [fname, setFname] = useState("");
-  const [uid, setUid] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [gender, setGender] = useState("");
+  const [address, setAddress] = useState("");
+  const [userRole, setUserRole] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [, setOpenAlert] = useContext(ShowAlertContext);
   const navigate = useNavigate();
-  const [open, setOpen] = React.useState(false);
 
-  // handleClickOpen and handleClose functions for buttons in alert dialog box
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-    navigate("/users");
-  };
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    let maxid = 0;
-    const data = new FormData(event.currentTarget);
-    if (userData.length > 0) {
-      const ids = userData.map((object) => {
-        return parseInt(object.userId);
-      });
-      maxid = Math.max(...ids);
+    const newData = {
+      username: userName,
+      email_id: email,
+      first_name: firstName,
+      last_name: lastName,
+      gender: gender,
+      address: address,
+      mobile_number: mobileNumber,
+      user_role: userRole,
+    };
+    const res = await fetch(`${usersAPI}/users`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(newData),
+    });
+    if (res.status === 201) {
+      setOpenAlert({ type: "success", msg: `User Added Successfully !` });
+    } else {
+      setOpenAlert({ type: "error", msg: res.statusText });
     }
-
-    setUserData([...userData,{
-        userId: maxid + 1,
-        name: data.get("firstName"),
-        uEmail: data.get("email"),
-        gender: data.get("gender"),
-      },
-    ]);
-    handleClickOpen();
-    setEmail("");
-    setFname("");
-    setGender("");
-    setUid("");
+    navigate("/users");
   };
 
   return (
@@ -85,31 +75,53 @@ export function AddUser() {
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
+                  autoComplete="username"
+                  name="username"
+                  value={userName}
                   required
-                  autoFocus
                   fullWidth
-                  type="number"
-                  value={uid}
-                  id="userId"
-                  label="User ID"
-                  name="userId"
-                  autoComplete="user-id"
-                  onChange={(e) => setUid(e.target.value)}
+                  id="username"
+                  label="User Name"
+                  onChange={(e) =>
+                    setUserName(e.target.value.split(" ").join(""))
+                  }
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  value={fname}
                   required
                   fullWidth
-                  id="firstName"
-                  label="Name"
-                  onChange={(e) => setFname(e.target.value)}
+                  type="email"
+                  id="email"
+                  value={email}
+                  label="Email Address"
+                  name="email"
+                  autoComplete="email"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </Grid>
-
+              <Grid item xs={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="first_name"
+                  value={firstName}
+                  label="first name"
+                  name="first_name"
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="last_name"
+                  value={lastName}
+                  label="last name"
+                  name="last_name"
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+              </Grid>
               <Grid item xs={12}>
                 <FormControl>
                   <FormLabel id="gender-label">Gender</FormLabel>
@@ -139,46 +151,50 @@ export function AddUser() {
                   </RadioGroup>
                 </FormControl>
               </Grid>
+
               <Grid item xs={12}>
                 <TextField
-                  required
                   fullWidth
-                  type="email"
-                  id="email"
-                  value={email}
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  onChange={(e) => setEmail(e.target.value)}
+                  multiline
+                  type="address"
+                  id="address"
+                  value={address}
+                  label="Address"
+                  name="address"
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  fullWidth
+                  type="number"
+                  id="mobile_number"
+                  value={mobileNumber}
+                  label="Mobile Number"
+                  name="mobile_number"
+                  onChange={(e) => setMobileNumber(e.target.value)}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  id="user_role"
+                  value={userRole}
+                  label="User Role"
+                  name="user_role"
+                  onChange={(e) => setUserRole(e.target.value)}
                 />
               </Grid>
             </Grid>
             <Button
               type="submit"
+              color="success"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
               Add User
             </Button>
-            {/* Dialog box will open when form submitted */}
-            <Dialog
-              open={open}
-              keepMounted
-              onClose={handleClose}
-              aria-describedby="alert-dialog-slide-description"
-            >
-              <DialogTitle>{"User Successfully Created"}</DialogTitle>
-              <DialogContent>
-                <DialogContentText id="alert-dialog-slide-description">
-                  Do you want to create more users
-                </DialogContentText>
-              </DialogContent>
-              <DialogActions>
-                <Button onClick={handleClose}>No</Button>
-                <Button onClick={handleClose}>Yes</Button>
-              </DialogActions>
-            </Dialog>
           </Box>
         </Box>
       </Container>
