@@ -1,0 +1,42 @@
+[
+    {
+      "id": "1",
+      "title": "The Exorcist",
+      "imgUrl" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNHW2mA2xwPwmWBlGq0okfkeGTOlm0RECI2PfX8HKJiecI0mPSYmu-veetH41C0vr5VU&usqp=CAU",
+      "rating" : 8.4,
+      "trailer" : "https://www.youtube.com/embed/bWyi3ShHxzM",
+      "desc" : "The Exorcist is a 1971 horror novel by American writer William Peter Blatty. The book details the demonic possession of eleven-year-old Regan MacNeil, the daughter of a famous actress, and the two priests who attempt to exorcise the demon."
+      
+    },
+    {
+      "id": "2",
+      "title": "Little Women; Or, Meg, Jo, Beth, and Amy",
+      "imgUrl" : "https://m.media-amazon.com/images/M/MV5BNzY2M2IzNWMtMWFkMS00ODk1LWI3NGYtNTBiYTc5MTA0Y2YzXkEyXkFqcGdeQXVyNDA5NTgxNjU@._V1_FMjpg_UX1000_.jpg",
+      "rating" : 6.3,
+      "trailer" : "https://www.youtube.com/embed/AST2-4db4ic",
+      "desc" : "With their father fighting in the American Civil War, sisters Jo, Meg, Amy and Beth are at home with their mother, a very outspoken woman for her time. The story tells of how the sisters grow up, find love, and find their place in the world. Four sisters and their mother at home. Their father is fighting in the war."
+    },
+    {
+      "id": "3",
+      "title": "The Enchanted April",
+      "imgUrl" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1162239197i/3077.jpg",
+      "rating" : 7.86,
+      "trailer" : "https://www.youtube.com/embed/X4pxWiWWp9k",
+      "desc" : "The women at the center of The Enchanted April are alike only in their dissatisfaction with their everyday lives. They find each other—and the castle of their dreams—through a classified ad in a London newspaper one rainy February afternoon. The ladies expect a pleasant holiday, but they don’t anticipate that the month they spend in Portofino will reintroduce them to their true natures and reacquaint them with joy. Now, if the same transformation can be worked on their husbands and lovers, the enchantment will be complete."
+    },
+    {
+      "id": "4",
+      "title": "The Blue Castle: a novel",
+      "imgUrl" : "https://kbimages1-a.akamaihd.net/ff690f85-9bf1-4191-abdb-cac5df0005c8/1200/1200/False/the-blue-castle-43.jpg",
+      "rating" : 8.6,
+      "desc" : "Valancy Stirling is 29, unmarried, and has never been in love. Living with her overbearing mother and meddlesome aunt, she finds her only consolation in the 'forbidden' books of John Foster and her daydreams of the Blue Castle--a place where all her dreams come true and she can be who she truly wants to be. After getting shocking news from the doctor, she rebels against her family and discovers a surprising new world, full of love and adventures far beyond her most secret dreams."
+    },
+    {
+      "id": "5",
+      "title": "The Godfather",
+      "imgUrl" : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Godfather-Novel-Cover.png/175px-Godfather-Novel-Cover.png",
+      "rating" : 7.6,
+      "trailer" : "https://www.youtube.com/embed/eZHsmb4ezEk",
+      "desc" : "The Godfather is a crime novel by American author Mario Puzo. Originally published in 1969 by G. P. Putnam's Sons, the novel details the story of a fictional Mafia family in New York City, headed by Vito Corleone, the Godfather."
+    }
+  ]
