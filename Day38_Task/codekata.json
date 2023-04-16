@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9df5"
+  },
+  "problem_id": "c001",
+  "user_id": "001",
+  "solved": true
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9df6"
+  },
+  "problem_id": "c002",
+  "user_id": "001",
+  "solved": true
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9df7"
+  },
+  "problem_id": "c003",
+  "user_id": "001",
+  "solved": true
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9df8"
+  },
+  "problem_id": "c004",
+  "user_id": "001",
+  "solved": false
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9df9"
+  },
+  "problem_id": "c005",
+  "user_id": "001",
+  "solved": true
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9dfa"
+  },
+  "problem_id": "c001",
+  "user_id": "002",
+  "solved": true
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9dfb"
+  },
+  "problem_id": "c002",
+  "user_id": "002",
+  "solved": true
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9dfc"
+  },
+  "problem_id": "c003",
+  "user_id": "002",
+  "solved": false
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9dfd"
+  },
+  "problem_id": "c004",
+  "user_id": "002",
+  "solved": false
+},{
+  "_id": {
+    "$oid": "643ba7bf8b4b89c7ad2b9dfe"
+  },
+  "problem_id": "c005",
+  "user_id": "002",
+  "solved": true
+}]

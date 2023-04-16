@@ -1,0 +1,571 @@
+Design database for Zen class programme
+solution : open window cmd and type mongo and hit enter
+
+        to create db for zen class use command :   
+        
+        > use zen_class_db
+
+
+users - create collection named as users with database
+solution : 
+        >       db.users.insertMany([
+                {
+                    user_id:"001",
+                    name: "nitesh tembe",
+                    email: "email1@gmail.com",
+                    mobile_number: 9689898989,
+                    password: "password1"
+                },
+                {
+                    user_id:"002",
+                    name: "user2",
+                    email: "email2@gmail.com",
+                    mobile_number: 9999999999,
+                    password: "password2"
+                },
+                {
+                    user_id:"003",
+                    name: "user3",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"004",
+                    name: "user4",
+                    email: "email4@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"005",
+                    name: "user5",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"006",
+                    name: "user6",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"007",
+                    name: "user7",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"008",
+                    name: "user8",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"009",
+                    name: "user9",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"010",
+                    name: "user10",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"011",
+                    name: "user11",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"012",
+                    name: "user12",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"013",
+                    name: "user13",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"014",
+                    name: "user14",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"015",
+                    name: "user15",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                },
+                {
+                    user_id:"016",
+                    name: "user16",
+                    email: "email3@gmail.com",
+                    mobile_number: 9999999459,
+                    password: "password3"
+                }
+            ])
+
+            to view data :   db.users.find().pretty();
+--------------------------------------------------------------------------------------
+codekata - create codekata collection
+    >   db.codekata.insertMany([
+            {
+                problem_id: "c001",
+                user_id: "001",
+                solved: true
+            },
+            {
+                problem_id: "c002",
+                user_id: "001",
+                solved: true
+            },
+            {
+                problem_id: "c003",
+                user_id: "001",
+                solved: true
+            },
+            {
+                problem_id: "c004",
+                user_id: "001",
+                solved: false
+            },
+            {
+                problem_id: "c005",
+                user_id: "001",
+                solved: true
+            },
+            {
+                problem_id: "c001",
+                user_id: "002",
+                solved: true
+            },
+            {
+                problem_id: "c002",
+                user_id: "002",
+                solved: true
+            },
+            {
+                problem_id: "c003",
+                user_id: "002",
+                solved: false
+            },
+            {
+                problem_id: "c004",
+                user_id: "002",
+                solved: false
+            },
+            {
+                problem_id: "c005",
+                user_id: "002",
+                solved: true
+            }
+        ])
+
+         to view data :   db.attendance.find().pretty();
+
+-----------------------------------------------------------------------------------
+
+attendance - create attendance collection with users attendance
+    >   db.attendance.insertMany([
+            {
+                date:ISODate("2020-10-15T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-16T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-17T08:00:00.000"),
+                user_id: "001",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-18T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-19T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-20T08:00:00.000"),
+                user_id: "001",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-21T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-22T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-23T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-24T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-25T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-26T08:00:00.000"),
+                user_id: "001",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-27T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-28T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-29T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-30T08:00:00.000"),
+                user_id: "001",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-31T08:00:00.000"),
+                user_id: "001",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-15T08:00:00.000"),
+                user_id: "002",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-16T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-17T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-18T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-19T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-20T08:00:00.000"),
+                user_id: "002",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-21T08:00:00.000"),
+                user_id: "002",
+                present: false
+            },
+            {
+                date:ISODate("2020-10-22T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-23T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-24T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-25T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-26T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-27T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-28T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-29T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-30T08:00:00.000"),
+                user_id: "002",
+                present: true
+            },
+            {
+                date:ISODate("2020-10-31T08:00:00.000"),
+                user_id: "002",
+                present: true
+            }
+        ]);
+
+        to view data :   db.attendance.find().pretty();
+---------------------------------------------------------------------------------------
+
+topics - create collection for topics
+    >   db.topics.insertMany([
+            {
+                topic_id: "t001",
+                date:ISODate("2020-10-15T08:00:00.000")
+            },
+            {
+                topic_id: "t002",
+                date:ISODate("2020-10-16T08:00:00.000")
+            },
+            {
+                topic_id: "t003",
+                date:ISODate("2020-10-17T08:00:00.000")
+            },
+            {
+                topic_id: "t004",
+                date:ISODate("2020-10-18T08:00:00.000")
+            },
+            {
+                topic_id: "t005",
+                date:ISODate("2020-10-19T08:00:00.000")
+            },
+            {
+                topic_id: "t006",
+                date:ISODate("2020-10-20T08:00:00.000")
+            },
+            {
+                topic_id: "t007",
+                date:ISODate("2020-10-21T08:00:00.000")
+            },
+            {
+                topic_id: "t008",
+                date:ISODate("2020-10-22T08:00:00.000")
+            },
+            {
+                topic_id: "t009",
+                date:ISODate("2020-10-23T08:00:00.000")
+            },
+            {
+                topic_id: "t010",
+                date:ISODate("2020-10-24T08:00:00.000")
+            },
+            {
+                topic_id: "t011",
+                date:ISODate("2020-10-25T08:00:00.000")
+            },
+            {
+                topic_id: "t012",
+                date:ISODate("2020-10-26T08:00:00.000")
+            },
+            {
+                topic_id: "t013",
+                date:ISODate("2020-10-27T08:00:00.000")
+            },
+            {
+                topic_id: "t014",
+                date:ISODate("2020-10-28T08:00:00.000")
+            },
+            {
+                topic_id: "t015",
+                date:ISODate("2020-10-29T08:00:00.000")
+            },
+            {
+                topic_id: "t016",
+                date:ISODate("2020-10-30T08:00:00.000")
+            },
+            {
+                topic_id: "t017",
+                date:ISODate("2020-10-31T08:00:00.000")
+            }
+        ])
+-------------------------------------------------------------------------
+
+tasks - create tasks collection
+    >   db.tasks.insertMany([
+            {
+                task_id: "task01",
+                date:ISODate("2020-10-20T08:00:00.000")
+            },
+            {
+                task_id: "task02",
+                date:ISODate("2020-10-25T08:00:00.000")
+            },
+            {
+                task_id: "task03",
+                date:ISODate("2020-10-28T08:00:00.000")
+            },
+            {
+                task_id: "task04",
+                date:ISODate("2020-10-30T08:00:00.000")
+            },
+            {
+                task_id: "task05",
+                date:ISODate("2020-11-07T08:00:00.000")
+            },
+            {
+                task_id: "task06",
+                date:ISODate("2020-11-10T08:00:00.000")
+            }
+        ]);
+
+
+student_task collection 
+    db.student_task.insertMany([{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e2e"
+        },
+        "task_id": "task01",
+        "student_id": "001",
+        "submitted": "true"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e2f"
+        },
+        "task_id": "task02",
+        "student_id": "001",
+        "submitted": "true"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e30"
+        },
+        "task_id": "task04",
+        "student_id": "001",
+        "submitted": "true"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e31"
+        },
+        "task_id": "task05",
+        "student_id": "001",
+        "submitted": "true"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e32"
+        },
+        "task_id": "task01",
+        "student_id": "002",
+        "submitted": "false"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e33"
+        },
+        "task_id": "task02",
+        "student_id": "002",
+        "submitted": "false"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e34"
+        },
+        "task_id": "task04",
+        "student_id": "002",
+        "submitted": "false"
+        },{
+        "_id": {
+            "$oid": "643bd9248b4b89c7ad2b9e35"
+        },
+        "task_id": "task05",
+        "student_id": "002",
+        "submitted": "false"
+        }])
+
+--------------------------------------------------------------------------
+company_drives 
+    >   db.company_drives.insertMany([
+            {
+                company_name: "Tech Mahindra",
+                date: ISODate("2020-10-21T08:00:00.000"),
+                students_appeared: [
+                    "001"
+                ]
+            },
+            {
+                company_name: "TCS",
+                date: ISODate("2020-10-27T08:00:00.000"),
+                students_appeared: [
+                    "001","002"
+                ]
+            },
+            {
+                company_name: "L&T infotech",
+                date: ISODate("2020-11-05T08:00:00.000"),
+                students_appeared: [
+                    "001"
+                ]
+            }
+        ])
+
+--------------------------------------------------------------------------------
+mentors - create mentors collection
+    >   db.mentors.insertMany([
+            {
+                mentor_id:"m01",
+                mentees: [
+                    "001","002","003","004","005","006","007","008","009","010","011","012","013","014","015","016"
+                ]
+            },
+            {
+                mentor_id:"m02",
+                mentees: [
+                    "001","002","003","004","005","007","008","013","014","015","016"
+                ]
+            }
+        ])
+
+
+
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------

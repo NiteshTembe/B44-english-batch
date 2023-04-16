@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "643bad0e8b4b89c7ad2b9e14"
+  },
+  "company_name": "Tech Mahindra",
+  "date": {
+    "$date": "2020-10-21T08:00:00.000Z"
+  },
+  "students_appeared": [
+    "001"
+  ]
+},{
+  "_id": {
+    "$oid": "643bad0e8b4b89c7ad2b9e15"
+  },
+  "company_name": "TCS",
+  "date": {
+    "$date": "2020-10-27T08:00:00.000Z"
+  },
+  "students_appeared": [
+    "001",
+    "002"
+  ]
+},{
+  "_id": {
+    "$oid": "643baeca8b4b89c7ad2b9e1b"
+  },
+  "company_name": "L&T infotech",
+  "date": {
+    "$date": "2020-11-05T08:00:00.000Z"
+  },
+  "students_appeared": [
+    "001"
+  ]
+}]

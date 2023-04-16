@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e2e"
+  },
+  "task_id": "task01",
+  "student_id": "001",
+  "submitted": "true"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e2f"
+  },
+  "task_id": "task02",
+  "student_id": "001",
+  "submitted": "true"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e30"
+  },
+  "task_id": "task04",
+  "student_id": "001",
+  "submitted": "true"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e31"
+  },
+  "task_id": "task05",
+  "student_id": "001",
+  "submitted": "true"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e32"
+  },
+  "task_id": "task01",
+  "student_id": "002",
+  "submitted": "false"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e33"
+  },
+  "task_id": "task02",
+  "student_id": "002",
+  "submitted": "false"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e34"
+  },
+  "task_id": "task04",
+  "student_id": "002",
+  "submitted": "false"
+},{
+  "_id": {
+    "$oid": "643bd9248b4b89c7ad2b9e35"
+  },
+  "task_id": "task05",
+  "student_id": "002",
+  "submitted": "false"
+}]
