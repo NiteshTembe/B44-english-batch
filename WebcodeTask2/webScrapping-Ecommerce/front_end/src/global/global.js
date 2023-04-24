@@ -2,4 +2,4 @@
 // export const imgUrlBase = "https://www.themoviedb.org/t/p/w220_and_h330_face";
 
 
-export const scrapDataApi = "http://localhost:9000/products";
+export const scrapDataApi = "https://webcode-backend-m18t.onrender.com/products";
