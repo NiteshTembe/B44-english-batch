@@ -1,0 +1,238 @@
+a:hover,
+a:focus {
+  text-decoration: none;
+  text-decoration-color: var(--primary-color-button-links);
+}
+
+.active-left-bar, .list-scroll:hover {
+  width: 4px;
+  -webkit-border-top-right-radius: 40px;
+  -webkit-border-bottom-right-radius: 40px;
+  -webkit-border-radius-topright: 40px;
+  -webkit-border-radius-bottomright: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.active-left-bar, .list-scroll:hover, svg.active {
+  background-color: var(--primary-color-button-links);
+}
+
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans",sans-serif;
+  height: 100%;
+  color: #555a8f;
+  color: var(--selected-font-color);
+  -webkit-font-smoothing: antialiased;
+  -webkit-osx-font-smoothing: grayscale;
+  background-color: #f9fbfd!important;
+}
+
+.btn {
+  color: #fff!important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.color-area:hover svg *,
+.active-area svg * {
+  fill: var(--primary-color-button-links);
+}
+
+.kYDnie svg {
+  fill: rgb(126, 142, 159);
+  width: 22px;
+  height: 22px;
+}
+
+.container-custom {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.errMessage {
+  color: #b60229;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-bottom: 0;
+}
+
+.flex-icons, .flex-y {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-y {
+  padding: 0 24px;
+}
+
+.forget {
+  cursor: pointer;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  height: auto;
+}
+
+.header__cont {
+  background-color: #f9fbfd;
+  height: 96px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  border: 1.5px solid #dedede;
+}
+
+.heading {
+  height: 48px;
+  left: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 56px;
+  color: #2a2a2a;
+  margin-left: 70px;
+}
+
+.label-style {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7e8e9f;
+}
+
+li {
+  display: list-item;
+  list-style: none;
+}
+
+.list-scroll:hover {
+  fill: var(--primary-color-button-links);
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #4b0dba !important;
+  color: #fff;
+}
+
+.main-menu:hover {
+  width: 217px;
+  overflow-y: auto;
+}
+
+.main-menu {
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 72px;
+  overflow: hidden;
+  transform: translateZ(0) scale(1);
+  transition: width .3s ease;
+  -webkit-transform: translateZ(0) scale(1);
+  -webkit-transition: width .3s ease;
+  z-index: 1000;
+}
+
+.main-menu li {
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.main-menu li>span {
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: all .1s linear;
+  -webkit-transform: translateZ(0) scale(1);
+  -webkit-transition: all .1s linear;
+}
+
+.main-menu > ul {
+  margin: 7px 0;
+}
+
+nav {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+nav li, nav ul {
+  outline: 0;
+  margin: 0 2px;
+  padding: 0;
+}
+
+.profileIcon {
+  cursor: pointer!important;
+}
+
+.sidebar-logo > img {
+  max-height: 52px;
+}
+
+.span-area {
+  color: var(--selected-font-color);
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+.zen-login-logo{
+  width: fit-content !important;
+}
+
+:root {
+  --selected-font-color: var(--product-font-color);
+  --product-font-color: #555a8f;
+  --product-background: #fff;
+  --primary-color-button-links: #4b0dba;
+  --primary-text-icons: #262631;
+  --clicked-state: #33028a;
+  --body-text: #7a7a7a;
+  --secondary-text: #93a4b7;
+  --borders-inactive-buttons: #dedede;
+  --header-background: #ede6f8;
+  --borders-inactive-text: #cdced7;
+  --title-background: #f7f5fc;
+  --success-color: #04a65b;
+  --hovers-clicked-state: #f8f9ff;
+  --error-color: #b60229;
+  --delete-color: #ff6565;
+}
